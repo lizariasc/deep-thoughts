@@ -1,5 +1,5 @@
 import React from 'react';
-import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client';
+import { ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import Header from './components/Header';
@@ -11,11 +11,6 @@ import NoMatch from './pages/NoMatch';
 import SingleThought from './pages/SingleThought';
 import Profile from './pages/Profile';
 import Signup from './pages/Signup';
-
-
-const httpLink = createHttpLink({
-  uri: '/graphql',
-});
 
 const client = new ApolloClient({
   uri: '/graphql',
